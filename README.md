@@ -113,6 +113,19 @@ section
         main
             cols((columns / 3) * 2, columns, gutter)
 ```
+Where:
+
+```
+gutter = 20px
+columns = 12
+breakpoints = {
+    sm: 0,
+    md: 640px,
+    lg: 1200px,
+    xlg: 1440px,
+    xxlg: 1920px
+}
+```
 
 HTML:
 ```
