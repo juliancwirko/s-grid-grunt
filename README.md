@@ -105,7 +105,6 @@ Stylus:
 section
     grid()
     aside, main
-        grid-cell()
         cols(columns, columns, gutter)
     @media screen and (min-width: rem-calc(breakpoints[md]))
         aside
