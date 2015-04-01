@@ -5,6 +5,8 @@ Check out 'S-Grid for Meteor' website for more information about how to use the 
 - [S-Grid for Meteor](http://s-grid.meteor.com)
 - [S-Grid npm package](https://www.npmjs.com/package/s-grid)
 
+- [Blog post about it](http://julian.io/s-grid-working-with-flexible-box-layouts/)
+
 ### Features
 
 - stylus
