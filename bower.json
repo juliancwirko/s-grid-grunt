@@ -1,7 +1,7 @@
 {
   "name": "project",
   "dependencies": {
-    "jquery": "~2.1.3",
-    "normalize-css": "~3.0.2"
+    "jquery": "~2.1.4",
+    "normalize-css": "~3.0.3"
   }
 }
