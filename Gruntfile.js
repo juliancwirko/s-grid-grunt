@@ -95,6 +95,10 @@ module.exports = function(grunt) {
 				files: '<%= app %>/styl/**/*.styl',
 				tasks: ['stylus']
 			},
+			assemble: {
+				files: '<%= app %>/templates/**/*.hbs',
+				tasks: ['assemble']
+			},
 			livereload: {
 				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
 				options: {
@@ -131,6 +135,20 @@ module.exports = function(grunt) {
 					'<%= app %>/**/*.html'
 				]
 			}
+		},
+
+		assemble: {
+			options: {
+				flatten: true,
+				plugins: ['permalinks'],
+				partials: ['<%= app %>/templates/partials/*.hbs'],
+				layoutdir: '<%= app %>/templates/layouts/',
+				data: ['<%= app %>/templates/data/*.{json,yml}']
+			},
+			pages: {
+		        src: '<%= app %>/templates/pages/*.hbs',
+        		dest: '<%= app %>/'
+			}
 		}
 
 	});
@@ -139,10 +157,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('compile-stylus', ['stylus']);
 	grunt.registerTask('bower-install', ['wiredep']);
 
-	grunt.registerTask('default', ['compile-stylus', 'bower-install', 'connect:app', 'watch']);
+	grunt.registerTask('default', ['assemble', 'compile-stylus', 'bower-install', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 
-	grunt.registerTask('publish', ['compile-stylus', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
+	grunt.registerTask('publish', ['assemble', 'compile-stylus', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
 
 };

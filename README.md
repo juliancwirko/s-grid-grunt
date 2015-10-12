@@ -7,8 +7,11 @@ Check out 'S-Grid for Meteor' website for more information about how to use the 
 
 - [Blog post about it](http://julian.io/s-grid-working-with-flexible-box-layouts/)
 
+There will be more documentation very soon...
+
 ### Features
 
+- assemble with handlebars templates
 - stylus
 - autoprefixer
 - flexbox grid system
@@ -31,6 +34,8 @@ rm -rf .git
 npm install
 bower install
 ````
+
+There is a `templates` folder with .hbs files. You should use these files to compile your .html files in the root app folder. You can use layouts, partials and even handlebars helpers.
 
 ### Tasks
 
@@ -75,6 +80,7 @@ $ grunt compile-stylus
 ### You probably want to read about
 
 - [grunt-wiredep](https://github.com/stephenplusplus/grunt-wiredep)
+- [grunt-assemble](https://www.npmjs.com/package/grunt-assemble)
 - [grunt-usemin](https://github.com/yeoman/grunt-usemin)
 - [stylus autoprefixer](https://github.com/jenius/autoprefixer-stylus)
 - [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
