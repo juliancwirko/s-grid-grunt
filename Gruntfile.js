@@ -1,9 +1,8 @@
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     require('load-grunt-tasks')(grunt);
-
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -14,6 +13,7 @@ module.exports = function(grunt) {
 			compile: {
 				options: {
 					use: [
+						require('rupture'),
 						require('s-grid'),
 						function () {
 							return require('autoprefixer-stylus')({browsers: 'last 2 versions'});
@@ -152,7 +152,6 @@ module.exports = function(grunt) {
 		}
 
 	});
-
 
 	grunt.registerTask('compile-stylus', ['stylus']);
 	grunt.registerTask('bower-install', ['wiredep']);
