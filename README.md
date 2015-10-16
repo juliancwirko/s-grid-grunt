@@ -2,12 +2,10 @@
 
 Check out 'S-Grid for Meteor' website for more information about how to use the grid (besides instalation, usage is the same):
 
-- [S-Grid for Meteor](http://s-grid.meteor.com)
-- [S-Grid npm package](https://www.npmjs.com/package/s-grid)
+- [sGrid Website and Documentation](http://stylusgrid.com)
+- [sGrid Npm package](https://www.npmjs.com/package/s-grid)
 
 - [Blog post about it](http://julian.io/s-grid-working-with-flexible-box-layouts/)
-
-There will be more documentation very soon...
 
 ### Features
 
@@ -33,6 +31,7 @@ cd s-grid-grunt
 rm -rf .git
 npm install
 bower install
+grunt
 ````
 
 There is a `templates` folder with .hbs files. You should use these files to compile your .html files in the root app folder. You can use layouts, partials and even handlebars helpers.
@@ -73,9 +72,6 @@ $ grunt bower-install
 ```
 $ grunt compile-stylus
 ```
-
-### Grid examples and more complex s-grid docs:
-[s-grid.meteor.com](http://s-grid.meteor.com)
 
 ### You probably want to read about
 
