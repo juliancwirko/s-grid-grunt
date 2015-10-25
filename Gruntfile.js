@@ -129,14 +129,6 @@ module.exports = function (grunt) {
 			}
 		},
 
-		wiredep: {
-			target: {
-				src: [
-					'<%= app %>/**/*.html'
-				]
-			}
-		},
-
 		assemble: {
 			options: {
 				flatten: true,
@@ -154,9 +146,8 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('compile-stylus', ['stylus']);
-	grunt.registerTask('bower-install', ['wiredep']);
 
-	grunt.registerTask('default', ['assemble', 'compile-stylus', 'bower-install', 'connect:app', 'watch']);
+	grunt.registerTask('default', ['assemble', 'compile-stylus', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 

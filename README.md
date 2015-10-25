@@ -17,7 +17,6 @@ Check out 'S-Grid for Meteor' website for more information about how to use the 
 - uglify
 - concat
 - jshint
-- wiredep (bower install)
 - imagemin
 - server with livereload
 
@@ -38,33 +37,27 @@ There is a `templates` folder with .hbs files. You should use these files to com
 
 ### Tasks
 
-Watch 127.0.0.1:9000 with livereload:
+Watch 127.0.0.1:9000 with livereload ('app' folder):
 ````
 $ grunt
 ````
 
-Publish 'dist' folder:
+Publish 'dist' folder (included tasks: 'assemble', 'compile-stylus', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin'):
 ````
 $ grunt publish
 ````
 
-Watch 127.0.0.1:9001 - only preview from 'dist' folder:
+Watch 127.0.0.1:9001 - only preview ('dist' folder):
 ````
 $ grunt server-dist
 ````
 
-#### Other tasks
+#### Other 'public' tasks which you can use separately in any moment
 
 ..for validating javascript (also in default 'grunt' task):
 
 ```
 $ grunt validate-js
-```
-
-..for injecting bower libraries (also in default 'grunt' task):
-
-```
-$ grunt bower-install
 ```
 
 ..for compiling Stylus files (also in default 'grunt' task)
