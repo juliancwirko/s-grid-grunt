@@ -1,10 +1,9 @@
-## S-Grid with Grunt
+## sGrid with Grunt
 
-Check out 'S-Grid for Meteor' website for more information about how to use the grid (besides instalation, usage is the same):
+Check out sGrid website for more information about how to use the grid:
 
 - [sGrid Website and Documentation](http://stylusgrid.com)
 - [sGrid Npm package](https://www.npmjs.com/package/s-grid)
-
 - [Blog post about it](http://julian.io/s-grid-working-with-flexible-box-layouts/)
 
 ### Features
