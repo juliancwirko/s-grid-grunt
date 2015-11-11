@@ -1,10 +1,11 @@
-## sGrid with Grunt
+## Grunt project starter with sGrid
 
 Check out sGrid website for more information about how to use the grid:
 
 - [sGrid Website and Documentation](http://stylusgrid.com)
 - [sGrid Npm package](https://www.npmjs.com/package/s-grid)
-- [Blog post about it](http://julian.io/s-grid-working-with-flexible-box-layouts/)
+- Blog post: [sGrid - Working with Flexible Box layouts](http://julian.io/s-grid-working-with-flexible-box-layouts/)
+- Blog post: [My workflow with the Stylus and Flexbox grid system](https://medium.com/@juliancwirko/my-workflow-with-the-stylus-and-flexbox-grid-system-5f4f50ac3f33)
 
 ### Features
 
@@ -24,7 +25,7 @@ Check out sGrid website for more information about how to use the grid:
 You need git, bower, npm installed
 
 ````
-git clone git@github.com:juliancwirko/s-grid-grunt.git
+git clone https://github.com/juliancwirko/s-grid-grunt.git
 cd s-grid-grunt
 rm -rf .git
 npm install
@@ -33,10 +34,11 @@ grunt
 ````
 
 There is a `templates` folder with .hbs files. You should use these files to compile your .html files in the root app folder. You can use layouts, partials and even handlebars helpers.
+for more information about Assemble go to: [grunt-assemble](https://www.npmjs.com/package/grunt-assemble) readme.
 
 ### Tasks
 
-Watch 127.0.0.1:9000 with livereload ('app' folder):
+Build and watch 127.0.0.1:9000 with livereload from 'app' folder:
 ````
 $ grunt
 ````
