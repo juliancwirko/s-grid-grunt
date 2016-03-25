@@ -29,9 +29,8 @@ You need git, bower, npm installed
 git clone https://github.com/juliancwirko/s-grid-grunt.git
 cd s-grid-grunt
 rm -rf .git
-npm install
-bower install
-grunt
+npm run install-all (or `npm install` and `bower install`)
+npm start
 ````
 
 There is a `templates` folder with .hbs files. You should use these files to compile your .html files in the root app folder. You can use layouts, partials and even handlebars helpers.
@@ -41,17 +40,17 @@ for more information about Assemble go to: [grunt-assemble](https://www.npmjs.co
 
 Build and watch 127.0.0.1:9000 with livereload from 'app' folder:
 ````
-$ grunt
+$ npm start
 ````
 
 Publish 'dist' folder (included tasks: 'assemble', 'compile-stylus', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin'):
 ````
-$ grunt publish
+$ npm run build
 ````
 
 Watch 127.0.0.1:9001 - only preview ('dist' folder):
 ````
-$ grunt server-dist
+$ npm run server-dist
 ````
 
 #### Other 'public' tasks which you can use separately in any moment
@@ -59,13 +58,7 @@ $ grunt server-dist
 ..for validating javascript (also in default 'grunt' task):
 
 ```
-$ grunt validate-js
-```
-
-..for compiling Stylus files (also in default 'grunt' task)
-
-```
-$ grunt compile-stylus
+$ npm run lint-js
 ```
 
 ### You probably want to read about
