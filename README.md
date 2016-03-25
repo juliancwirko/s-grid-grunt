@@ -1,5 +1,17 @@
 ## Grunt project starter with sGrid
 
+### Start
+
+You need git, bower, npm installed
+
+````bash
+$ git clone https://github.com/juliancwirko/s-grid-grunt.git
+$ cd s-grid-grunt
+$ rm -rf .git
+$ npm run install-all (or `npm install` and `bower install`)
+$ npm start
+````
+
 Check out sGrid website for more information about how to use the grid:
 
 - [sGrid Website and Documentation](http://stylusgrid.com)
@@ -21,35 +33,23 @@ Check out sGrid website for more information about how to use the grid:
 - imagemin
 - server with livereload
 
-### Start
-
-You need git, bower, npm installed
-
-````
-git clone https://github.com/juliancwirko/s-grid-grunt.git
-cd s-grid-grunt
-rm -rf .git
-npm run install-all (or `npm install` and `bower install`)
-npm start
-````
-
 There is a `templates` folder with .hbs files. You should use these files to compile your .html files in the root app folder. You can use layouts, partials and even handlebars helpers.
 for more information about Assemble go to: [grunt-assemble](https://www.npmjs.com/package/grunt-assemble) readme.
 
 ### Tasks
 
 Build and watch 127.0.0.1:9000 with livereload from 'app' folder:
-````
+````bash
 $ npm start
 ````
 
 Publish 'dist' folder (included tasks: 'assemble', 'compile-stylus', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin'):
-````
+````bash
 $ npm run build
 ````
 
 Watch 127.0.0.1:9001 - only preview ('dist' folder):
-````
+````bash
 $ npm run server-dist
 ````
 
@@ -57,7 +57,7 @@ $ npm run server-dist
 
 ..for validating javascript (also in default 'grunt' task):
 
-```
+```bash
 $ npm run lint-js
 ```
 
